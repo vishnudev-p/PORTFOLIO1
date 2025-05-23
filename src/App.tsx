@@ -36,29 +36,28 @@ function App() {
   const fadeInUpClass = "opacity-0 translate-y-10 transition-all duration-1000";
   const visibleClass = "opacity-100 translate-y-0";
 
-  // Define projects with repository links
+  // Define projects with public folder paths
   const projects = [
     {
       title: "SAFEGUARD360",
       description: "A Flask-based surveillance tool using YOLOv8 and a custom audio classifier to detect violence and screams in real-time.",
-      tech: ["Python", "Computer Vision","Yolo","API Integration"],
+      tech: ["Python", "Computer Vision", "Yolo", "API Integration"],
       repoLink: "https://github.com/vishnudev-p/SAFEGUARD360",
-           image: "/3.png"
+      image: "/3.png"
     },
     {
       title: "AI-FITNESS APP",
       description: "A Python-based desktop app using OpenCV to track exercises via webcam, aiming to provide secure login and real-time feedback for fitness enthusiasts.",
-      tech: ["Python", "Open-CV","pose estimation"],
+      tech: ["Python", "Open-CV", "pose estimation"],
       repoLink: "https://github.com/vishnudev-p/AI-FITNESS-APP",
-      image: "/02.WEBP"
+      image: "/02.webp" // Fixed case from 02.WEBP
     },
     {
       title: "Comics Universe",
       description: "Comics Universe is a web-based comic reading platform developed as part of an MCA academic curriculum. It aims to make visual storytelling accessible and inclusive, especially for children in BUDS schools and students with disabilities.",
-      tech: ["Flask", "HTML","CSS", "JavaScript"],
+      tech: ["Flask", "HTML", "CSS", "JavaScript"],
       repoLink: "https://github.com/vishnudev-p/Comic-Book-Creation-and-Interactive-Website",
-      image: "01.png"
-
+      image: "/01.png"
     }
   ];
 
@@ -77,7 +76,6 @@ function App() {
             <div className="hidden md:flex space-x-8">
               <button onClick={() => scrollToSection('about')} className="hover:text-blue-400 transition-colors">About</button>
               <button onClick={() => scrollToSection('education')} className="hover:text-blue-400 transition-colors">Education</button>
-              {/*<button onClick={() => scrollToSection('experience')} className="hover:text-blue-400 transition-colors">Experience</button>*/}
               <button onClick={() => scrollToSection('certifications')} className="hover:text-blue-400 transition-colors">Certifications</button>
               <button onClick={() => scrollToSection('projects')} className="hover:text-blue-400 transition-colors">Projects</button>
               <button onClick={() => scrollToSection('contact')} className="hover:text-blue-400 transition-colors">Contact</button>
@@ -87,7 +85,6 @@ function App() {
             <div className="md:hidden py-4 space-y-4">
               <button onClick={() => scrollToSection('about')} className="block w-full text-left px-4 py-2 hover:bg-gray-800">About</button>
               <button onClick={() => scrollToSection('education')} className="block w-full text-left px-4 py-2 hover:bg-gray-800">Education</button>
-              <button onClick={() => scrollToSection('experience')} className="block w-full text-left px-4 py-2 hover:bg-gray-800">Experience</button>
               <button onClick={() => scrollToSection('certifications')} className="block w-full text-left px-4 py-2 hover:bg-gray-800">Certifications</button>
               <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-4 py-2 hover:bg-gray-800">Projects</button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-2 hover:bg-gray-800">Contact</button>
@@ -104,7 +101,7 @@ function App() {
               Hi, I'm Vishnu Dev P
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Aspire Machine Learning | Python Programmer | Developed ML Models | Proficient in AI ToolsAspire
+              Aspire Machine Learning | Python Programmer | Developed ML Models | Proficient in AI Tools
             </p>
             <div className="flex gap-6 mb-8 justify-center md:justify-start">
               <a href="https://github.com/vishnudev-p" className="hover:text-blue-400 transition-colors transform hover:scale-110"><Github size={24} /></a>
@@ -116,8 +113,7 @@ function App() {
             </a>
           </div>
           <div className={`flex-1 ${fadeInUpClass} ${isVisible['hero'] ? visibleClass : ''}`}>
-          <img src="/IMG_8584.jpg" alt="Profile" className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover mx-auto border-4 border-blue-400 animate-float" />
-
+            <img src="/IMG_8584.JPG" alt="Profile" className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover mx-auto border-4 border-blue-400 animate-float" />
           </div>
         </div>
       </section>
@@ -130,10 +126,10 @@ function App() {
             <div className={`space-y-6 ${fadeInUpClass} ${isVisible['about'] ? visibleClass : ''}`}>
               <h3 className="text-2xl font-semibold text-blue-400">What I do</h3>
               <p className="text-gray-300">
-              I am Vishnu Dev, a postgraduate student currently pursuing MCA at Calicut University, Kerala.
-              My area of expertise includes Python, machine learning, and data science along with proficient knowledge of frameworks like TensorFlow and OpenCV. 
-              I am interested in building creative machine learning models and using data analytics to solve real-life problems.
-              Throughout my studies, I have been applying my skills to develop meaningful solutions, and I look forward to progressing in AI and machine learning.
+                I am Vishnu Dev, a postgraduate student currently pursuing MCA at Calicut University, Kerala.
+                My area of expertise includes Python, machine learning, and data science along with proficient knowledge of frameworks like TensorFlow and OpenCV.
+                I am interested in building creative machine learning models and using data analytics to solve real-life problems.
+                Throughout my studies, I have been applying my skills to develop meaningful solutions, and I look forward to progressing in AI and machine learning.
               </p>
             </div>
             <div className={`space-y-6 ${fadeInUpClass} ${isVisible['about'] ? visibleClass : ''}`}>
@@ -145,11 +141,11 @@ function App() {
                 </div>
                 <div className="bg-gray-700 p-4 rounded-lg transform hover:scale-105 transition-transform">
                   <p className="font-semibold">Backend</p>
-                  <p className="text-gray-300"> Python, SQLite</p>
+                  <p className="text-gray-300">Python, SQLite</p>
                 </div>
                 <div className="bg-gray-700 p-4 rounded-lg transform hover:scale-105 transition-transform">
                   <p className="font-semibold">Machine Learning</p>
-                  <p className="text-gray-300">YOLO, TensorFlow Lite, Keras,Computer Vision,</p>
+                  <p className="text-gray-300">YOLO, TensorFlow Lite, Keras, Computer Vision</p>
                 </div>
                 <div className="bg-gray-700 p-4 rounded-lg transform hover:scale-105 transition-transform">
                   <p className="font-semibold">Tools</p>
@@ -168,19 +164,19 @@ function App() {
           <div className="space-y-8 max-w-3xl mx-auto">
             <div className={`bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all ${fadeInUpClass} ${isVisible['education'] ? visibleClass : ''}`}>
               <div className="flex items-start gap-6">
-              <div className="bg-blue-500/10 w-20 h-20 flex items-center justify-center rounded-full overflow-hidden">
-                  <img src="/download-photoaidcom-cropped.jpeg"alt="MIT"  className="w-full h-full object-cover rounded-full" />
+                <div className="bg-blue-500/10 w-20 h-20 flex items-center justify-center rounded-full overflow-hidden">
+                  <img src="/download-photoaidcom-cropped.jpeg" alt="Lead College" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <div className="flex-1 text-left">
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-xl font-semibold">Master of Computer Application</h3>
-                      <p className="text-blue-400">Lead College Of Management Autonomus</p>
+                      <p className="text-blue-400">Lead College Of Management Autonomous</p>
                     </div>
                     <p className="text-gray-400">2024 - PRESENT</p>
                   </div>
                   <p className="text-gray-300">
-                  I have Currently Pursuing my Master in Computer Application from Lead College of Management.
+                    I am currently pursuing my Master in Computer Application from Lead College of Management.
                   </p>
                 </div>
               </div>
@@ -188,7 +184,7 @@ function App() {
             <div className={`bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all ${fadeInUpClass} ${isVisible['education'] ? visibleClass : ''}`}>
               <div className="flex items-start gap-6">
                 <div className="bg-blue-500/10 w-20 h-20 flex items-center justify-center rounded-full overflow-hidden">
-                <img src="/ijjurbqg.oz3.webp" alt="MIT"  className="w-full h-full object-cover rounded-full" />
+                  <img src="/ijjurbqg.oz3.webp" alt="Calicut University" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <div className="flex-1 text-left">
                   <div className="flex justify-between items-start mb-4">
@@ -199,7 +195,7 @@ function App() {
                     <p className="text-gray-400">2021 - 2024</p>
                   </div>
                   <p className="text-gray-300">
-                  I hold a Bachelor of Computer Applications (BCA) degree from the Computer Science Department at Calicut University. I completed my BCA at Sadanam Kumaran College, graduating from Calicut University with an impressive CGPA of 5.742.
+                    I hold a Bachelor of Computer Applications (BCA) degree from the Computer Science Department at Calicut University. I completed my BCA at Sadanam Kumaran College, graduating from Calicut University with an impressive CGPA of 5.742.
                   </p>
                 </div>
               </div>
@@ -207,43 +203,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Experience Section 
-      <section id="experience" className="bg-gray-800 min-h-screen flex items-center justify-center">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-12">Experience</h2>
-          <div className="space-y-8 max-w-3xl mx-auto">
-            <div className={`bg-gray-700 p-6 rounded-lg transform hover:scale-105 transition-all ${fadeInUpClass} ${isVisible['experience'] ? visibleClass : ''}`}>
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold">Senior Software Engineer</h3>
-                  <p className="text-blue-400">Google</p>
-                </div>
-                <p className="text-gray-400">2022 - Present</p>
-              </div>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 text-left">
-                <li>Led a team of 5 engineers in developing cloud-native applications</li>
-                <li>Improved system performance by 40% through architecture optimization</li>
-                <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
-              </ul>
-            </div>
-            <div className={`bg-gray-700 p-6 rounded-lg transform hover:scale-105 transition-all ${fadeInUpClass} ${isVisible['experience'] ? visibleClass : ''}`}>
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold">Software Developer</h3>
-                  <p className="text-blue-400">Microsoft</p>
-                </div>
-                <p className="text-gray-400">2020 - 2022</p>
-              </div>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 text-left">
-                <li>Developed and maintained cloud services using Azure</li>
-                <li>Collaborated with cross-functional teams to deliver features</li>
-                <li>Mentored junior developers and led code reviews</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>*/}
 
       {/* Certifications Section */}
       <section id="certifications" className="min-h-screen flex items-center justify-center container mx-auto px-4">
@@ -264,7 +223,7 @@ function App() {
             </a>
             <a href="https://drive.google.com/file/d/1QFlL-hUaF1oF_lS6yYOlU3XEb8gha4rL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all cursor-pointer ${fadeInUpClass} ${isVisible['certifications'] ? visibleClass : ''}`}>
               <h3 className="text-xl font-semibold mb-2">Solutions Architecture Job Simulation</h3>
-              <p className="text-blue-400 mb-4"> Forage (in partnership with AWS APAC)</p>
+              <p className="text-blue-400 mb-4">Forage (in partnership with AWS APAC)</p>
               <p className="text-gray-300">Designed a scalable AWS Elastic Beanstalk architecture for a client with growth and performance issues, explaining solutions and costs clearly.</p>
               <p className="text-gray-400 mt-4">Issued: May 2025</p>
             </a>
@@ -300,49 +259,46 @@ function App() {
           </div>
         </div>
       </section>
-{/* Contact Section */}
-<section id="contact" className="container mx-auto px-4 py-40 min-h-screen">
-  <h2 className="text-4xl font-bold mb-12 text-center">Get In Touch</h2>
-  <div className="max-w-2xl mx-auto">
-    <div className={`space-y-6 ${fadeInUpClass} ${isVisible['contact'] ? visibleClass : ''}`}>
-      <div className="text-center">
-        <p className="text-lg mb-4">
-          <span className="font-medium">Email:</span>  vishnudevp304@gmail.com
-        </p>
-        <p className="text-lg mb-4">
-          <span className="font-medium">Phone:</span>  9061798516
-        </p>
-        <p className="text-lg mb-4">
-          <span className="font-medium">Address:</span> PALAKKAD, KERALA, INDIA
-        </p>
-        {/* Social Media Links */}
-        <div className="flex justify-center space-x-6 mt-8">
-          <a 
-            href="https://github.com/vishnudev-p" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all hover:transform hover:scale-110"
-            title="GitHub"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a 
-            href="www.linkedin.com/in/vishnudevp" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all hover:transform hover:scale-110"
-            title="LinkedIn"
-          >
-            <FaLinkedin size={24} />
-          </a>
+
+      {/* Contact Section */}
+      <section id="contact" className="container mx-auto px-4 py-40 min-h-screen">
+        <h2 className="text-4xl font-bold mb-12 text-center">Get In Touch</h2>
+        <div className="max-w-2xl mx-auto">
+          <div className={`space-y-6 ${fadeInUpClass} ${isVisible['contact'] ? visibleClass : ''}`}>
+            <div className="text-center">
+              <p className="text-lg mb-4">
+                <span className="font-medium">Email:</span> vishnudevp304@gmail.com
+              </p>
+              <p className="text-lg mb-4">
+                <span className="font-medium">Phone:</span> 9061798516
+              </p>
+              <p className="text-lg mb-4">
+                <span className="font-medium">Address:</span> PALAKKAD, KERALA, INDIA
+              </p>
+              <div className="flex justify-center space-x-6 mt-8">
+                <a
+                  href="https://github.com/vishnudev-p"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-all hover:transform hover:scale-110"
+                  title="GitHub"
+                >
+                  <FaGithub size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/vishnudevp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-all hover:transform hover:scale-110"
+                  title="LinkedIn"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="mt-8">
-        
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 py-8">
