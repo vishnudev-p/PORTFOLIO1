@@ -57,7 +57,7 @@ function App() {
       description: "Comics Universe is a web-based comic reading platform developed as part of an MCA academic curriculum. It aims to make visual storytelling accessible and inclusive, especially for children in BUDS schools and students with disabilities.",
       tech: ["Flask", "HTML","CSS", "JavaScript"],
       repoLink: "https://github.com/vishnudev-p/Comic-Book-Creation-and-Interactive-Website",
-      image: "/01.png"
+      image: "01.png"
 
     }
   ];
